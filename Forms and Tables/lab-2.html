@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Forms and Tables Review</title>
+</head>
+<body>
+
+  <h1>Hotel Feedback Form</h1>
+
+  <!-- FORM -->
+  <form method="post" action="submit.html">
+
+    <!-- Full Name -->
+    <label for="full-name">Full Name:</label><br />
+    <input
+      type="text"
+      id="full-name"
+      name="fullName"
+      placeholder="e.g. Quincy Larson"
+      minlength="5"
+      maxlength="30"
+      required
+    />
+
+    <br /><br />
+
+    <!-- Email -->
+    <label for="email">Email Address:</label><br />
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+    />
+
+    <br /><br />
+
+    <!-- Number of Nights -->
+    <label for="nights">Number of Nights:</label><br />
+    <input
+      type="number"
+      id="nights"
+      name="nights"
+      min="1"
+      max="14"
+      readonly
+      value="3"
+    />
+
+    <br /><br />
+
+    <!-- Radio Buttons -->
+    <fieldset>
+      <legend>Was this your first time at our hotel?</legend>
+
+      <label for="yes-option">Yes</label>
+      <input
+        type="radio"
+        id="yes-option"
+        name="firstTime"
+        value="yes"
+      />
+
+      <br />
+
+      <label for="no-option">No</label>
+      <input
+        type="radio"
+        id="no-option"
+        name="firstTime"
+        value="no"
+      />
+    </fieldset>
+
+    <br />
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Why did you choose to stay at our hotel?</legend>
+
+      <label for="location">Location</label>
+      <input
+        type="checkbox"
+        id="location"
+        name="reason"
+        value="location"
+      />
+
+      <br />
+
+      <label for="price">Price</label>
+      <input
+        type="checkbox"
+        id="price"
+        name="reason"
+        value="price"
+      />
+
+      <br />
+
+      <label for="service">Service</label>
+      <input
+        type="checkbox"
+        id="service"
+        name="reason"
+        value="service"
+      />
+    </fieldset>
+
+    <br /><br />
+
+    <!-- Buttons -->
+    <button type="submit">Submit Form</button>
+    <button type="reset">Reset Form</button>
+    <button type="button">Show Summary</button>
+
+  </form>
+
+  <hr />
+
+  <!-- TABLE -->
+  <h2>Guest Satisfaction Scores</h2>
+
+  <table>
+    <caption>Guest Satisfaction Scores</caption>
+
+    <thead>
+      <tr>
+        <th>Guest Name</th>
+        <th>Room</th>
+        <th>Cleanliness</th>
+        <th>Service</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Alice Brown</td>
+        <td>101</td>
+        <td>9</td>
+        <td>8</td>
+      </tr>
+
+      <tr>
+        <td>John Smith</td>
+        <td>203</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+
+      <tr>
+        <td>Maria Garcia</td>
+        <td>305</td>
+        <td>9</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3">Average Score</td>
+        <td>8.7</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>
